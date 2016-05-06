@@ -45,13 +45,15 @@
     "extends": "xo-space",
     "env": {
       "mocha": true
+    },
+    "rules": {
+        "indent": ["error", 2]
     }
 },
   "repository": "https://github.com/fBosch/node-rune-converter.git",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
-  },
+    "test": "gulp"  },
   "license": "Apache-2.0",
   "dependencies": {
     "lodash": "^4.11.2"
