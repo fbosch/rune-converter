@@ -4,21 +4,21 @@
 a small node package for converting text to the runic alphabet
 
 
-# Installation
+## Installation
 `npm install rune-converter`
 
-# Usage
+## Usage
 ``` javascript
 
   import runeConverter from 'rune-converter'
 
 ```
-# Methods
+## Methods
 
-## toRunic(str, options)
+### toRunic(str, options)
 `toRunic()` is the main method to convert a given string to runic.
 
-### Arguments 
+#### Arguments 
 * **str** (String) - the string you wish to convert
 * **options** (Object) - options that determine the conversion of the string
     * **punctuation**  - determines what symbol to transcribe ' . ' to
@@ -35,7 +35,7 @@ a small node package for converting text to the runic alphabet
       double **(default)** | ᛬
       single | ᛫
 
-### Examples
+#### Examples
 ``` javascript
   var str = 'Lorem ipsum dolor sit amet.'
 
@@ -46,16 +46,16 @@ a small node package for converting text to the runic alphabet
   runeConverter.toRunic(str, { spacing: 'normal' }) // ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭
 ```
 
-## transcribe(str, variantIndex)
+### transcribe(str, variantIndex)
 
 `transcribe()` is used to transcribe single letters (or certain combinations) into their corrosponding rune(s)
 
 
-### Arguments
+#### Arguments
 * **str** (String) - the letter(s) to transcribe to elder futhark
 * **variantIndex** (Number) - an optional parameter to specify a certain variant of a rune (if there's more than one)
 
-### Examples
+#### Examples
 
 ``` javascript
 runeConverter.transcribe('h') // ᚺ
@@ -69,16 +69,16 @@ runeConverter.transcribe('x') // ᚲᛋ
 runeConverter.transcribe('eau') // ᛟ
 ````
 
-## transcribeLetterCombinations(str) 
+### transcribeLetterCombinations(str) 
 
 `transcribeLetterCombinations()` is used to transcribe certain combinations of letters to runic. 
 
 This method will **not** convert the entire string to runic, it will only replace all multi-letter combinations with their corrosponding rune(s).
 
-### Arguments
+#### Arguments
 * **str** (String) - the string to replace letter combinations into
 
-### Examples
+#### Examples
 ``` javascript 
 runeConverter.transcribeLetterCombinations('eat the food Tina!') // ᛠt ᚦe food Tina!
 ``` 
