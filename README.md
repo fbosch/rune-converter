@@ -5,9 +5,7 @@ a small node package for converting text to the runic alphabet
 
 
 # Installation
-``` node
-npm install rune-converter
-```
+`npm install rune-converter`
 
 # Usage
 ``` javascript
