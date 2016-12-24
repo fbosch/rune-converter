@@ -22,12 +22,14 @@ a small node package for converting text to the runic alphabet
 * **str** (String) - the string you wish to convert
 * **options** (Object) - options that determine the conversion of the string
     * **punctuation**  - determines what symbol to transcribe ' . ' to
+    
       key | value
       ---- | -----
       cross **(default)** | ᛭
       double | ᛬
       single | ᛫
     * **spacing** - determines what symbol to transcribe spacing to
+    
       key | value 
       --- | -----
       normal | `whitespace`
