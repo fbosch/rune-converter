@@ -13,10 +13,10 @@ a small node package for converting text to the runic alphabet
   import runeConverter from 'rune-converter'
 
 ```
-## Methods
+## Functions
 
 ### toRunic(str, options)
-`toRunic()` is the main method to convert a given string to runic.
+`toRunic()` is the main function to convert a given string to runic.
 
 #### Arguments 
 * **str** (String) - the string you wish to convert
@@ -75,7 +75,7 @@ runeConverter.transcribe('eau') // ᛟ
 
 `transcribeLetterCombinations()` is used to transcribe certain combinations of letters to runic. 
 
-This method will **not** convert the entire string to runic, it will only replace all multi-letter combinations with their corrosponding rune(s).
+This function will **not** convert the entire string to runic, it will only replace all multi-letter combinations with their corrosponding rune(s).
 
 #### Arguments
 * **str** (String) - the string to replace letter combinations into
