@@ -1,8 +1,6 @@
 # rune-converter
 
-
 a small node package for converting text to the runic alphabet
-
 
 ## Installation
 `npm install rune-converter`
@@ -10,13 +8,13 @@ a small node package for converting text to the runic alphabet
 ## Usage
 ``` javascript
 
-  import runeConverter from 'rune-converter'
+  import {toRunic, transcribe, transcribeLetterCombinations} from 'rune-converter'
 
 ```
 ## Functions
 
 ### toRunic(str, options)
-`toRunic()` is the main function to convert a given string to runic.
+`toRunic()` is the default function to convert a given string to runic.
 
 #### Arguments 
 * **str** (String) - the string you wish to convert
@@ -41,11 +39,11 @@ a small node package for converting text to the runic alphabet
 ``` javascript
   var str = 'Lorem ipsum dolor sit amet.'
 
-  runeConverter.toRunic(str) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛭
+  toRunic(str) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛭
 
-  runeConverter.toRunic(str, { punctuation: 'single' }) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛫
+  toRunic(str, { punctuation: 'single' }) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛫
 
-  runeConverter.toRunic(str, { spacing: 'normal' }) // ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭
+  toRunic(str, { spacing: 'normal' }) // ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭
 ```
 
 ### transcribe(str, variantIndex)
@@ -55,20 +53,17 @@ a small node package for converting text to the runic alphabet
 
 #### Arguments
 * **str** (String) - the letter(s) to transcribe to elder futhark
-* **variantIndex** (Number) - an optional parameter to specify a certain variant of a rune (if there's more than one)
 
 #### Examples
 
 ``` javascript
-runeConverter.transcribe('h') // ᚺ
-// variantIndex
-runeConverter.transcribe('h', 1) // ᚻ
+transcribe('h') // ᚺ
 
 // multiple runes returned for single letter
-runeConverter.transcribe('x') // ᚲᛋ
+transcribe('x') // ᚲᛋ
 
 // letter combinations to single rune
-runeConverter.transcribe('eau') // ᛟ
+transcribe('eau') // ᛟ
 ````
 
 ### transcribeLetterCombinations(str) 
@@ -82,5 +77,5 @@ This function will **not** convert the entire string to runic, it will only repl
 
 #### Examples
 ``` javascript 
-runeConverter.transcribeLetterCombinations('eat the food Tina!') // ᛠt ᚦe food Tina!
+transcribeLetterCombinations('eat the food Tina!') // ᛠt ᚦe food Tina!
 ``` 
