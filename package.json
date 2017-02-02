@@ -42,7 +42,7 @@
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
     "isparta": "^3.0.3",
-    "lodash": "^4.11.2"
+    "lodash": "^4.17.4"
   },
   "eslintConfig": {
     "ecmaVersion": 6,
@@ -64,6 +64,15 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "lodash": "^4.11.2"
+    "lodash.assign": "^4.2.0",
+    "lodash.clone": "^4.5.0",
+    "lodash.has": "^4.5.2",
+    "lodash.isnan": "^3.0.2",
+    "lodash.isnil": "^4.0.0",
+    "lodash.isstring": "^4.0.1",
+    "lodash.keys": "^4.2.0",
+    "lodash.replace": "^4.1.4",
+    "lodash.tolower": "^4.1.2",
+    "lodash.tonumber": "^4.0.3"
   }
 }
