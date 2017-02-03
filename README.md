@@ -8,13 +8,13 @@ a small node package for converting text to the runic alphabet
 ## Usage
 ``` javascript
 
-  import { toRunic, transcribe, transcribeLetterCombinations } from 'rune-converter'
+  import { transcribe, transcribeSingleLetter, transcribeLetterCombinations } from 'rune-converter'
 
 ```
 ## Functions
 
-### toRunic(str, options)
-`toRunic()` is the default function to convert a given string to runic.
+### transcribe(str, options)
+`transcribe()` is the default function to convert a given string to elder futhark.
 
 #### Arguments 
 * **str** (String) - the string you wish to convert
@@ -39,17 +39,16 @@ a small node package for converting text to the runic alphabet
 ``` javascript
   var str = 'Lorem ipsum dolor sit amet.'
 
-  toRunic(str) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛭
+  transcribe(str) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛭
 
-  toRunic(str, { punctuation: 'single' }) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛫
+  transcribe(str, { punctuation: 'single' }) // ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛫
 
-  toRunic(str, { spacing: 'normal' }) // ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭
+  transcribe(str, { spacing: 'normal' }) // ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭
 ```
 
-### transcribe(str, variantIndex)
+### transcribeSingleLetter(str, variantIndex)
 
-`transcribe()` is used to transcribe single letters (or certain combinations) into their corrosponding rune(s)
-
+`transcribeSingleLetter()` is used to transcribe single letters into their corrosponding rune(s)
 
 #### Arguments
 * **str** (String) - the letter(s) to transcribe to elder futhark
