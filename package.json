@@ -1,6 +1,6 @@
 {
   "name": "rune-converter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "convert text written in the latin alphabet to runes in elder futhark (UTF8)",
   "homepage": "",
   "author": {
