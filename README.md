@@ -8,7 +8,7 @@ a small node package for converting text to the runic alphabet
 ## Usage
 ``` javascript
 
-  import {toRunic, transcribe, transcribeLetterCombinations} from 'rune-converter'
+  import { toRunic, transcribe, transcribeLetterCombinations } from 'rune-converter'
 
 ```
 ## Functions
@@ -77,5 +77,5 @@ This function will **not** convert the entire string to runic, it will only repl
 
 #### Examples
 ``` javascript 
-transcribeLetterCombinations('eat the food Tina!') // ᛠt ᚦe food Tina!
+transcribeLetterCombinations('Chris Chan') // ᚺᚱis ᚷan
 ``` 

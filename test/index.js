@@ -6,9 +6,9 @@ console.log(transcribe, transcribeLetterCombinations)
 
 describe('rune-converter', function () {
   it('should return the correct rune corrosponding to the given letter or combination of letters', () => {
-    assert(transcribe('a') === 'ᚨ', 'returns $ if it exists')
+    assert(transcribe('a') === 'ᚨ', 'returns corrosponding rune if it exists')
     assert(transcribe(1) === '', 'returns empty string if the input is a number')
-    assert(transcribe('å') === 'å', 'returns the given letter if there\'s no corrosponding rune')
+    assert(transcribe('+') === '+', 'returns empty string if there\'s no corrosponding rune to the given letter')
     assert(transcribe('eau') === 'ᛟ', 'is able to convert multiple letters to a single rune')
     assert(transcribe('x') === 'ᚲᛋ', 'is able to convert single letter to multiple runes')
   })
