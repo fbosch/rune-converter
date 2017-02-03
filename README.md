@@ -8,7 +8,7 @@ a small node package for converting text to the runic alphabet
 ## Usage
 ``` javascript
 
-  import { transcribe, transcribeSingleLetter, transcribeLetterCombinations } from 'rune-converter'
+  import transcribe from 'rune-converter'
 
 ```
 ## Functions
@@ -45,36 +45,3 @@ a small node package for converting text to the runic alphabet
 
   transcribe(str, { spacing: 'normal' }) // ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭
 ```
-
-### transcribeSingleLetter(str, variantIndex)
-
-`transcribeSingleLetter()` is used to transcribe single letters into their corrosponding rune(s)
-
-#### Arguments
-* **str** (String) - the letter(s) to transcribe to elder futhark
-
-#### Examples
-
-``` javascript
-transcribe('h') // ᚺ
-
-// multiple runes returned for single letter
-transcribe('x') // ᚲᛋ
-
-// letter combinations to single rune
-transcribe('eau') // ᛟ
-````
-
-### transcribeLetterCombinations(str) 
-
-`transcribeLetterCombinations()` is used to transcribe certain combinations of letters to runic. 
-
-This function will **not** convert the entire string to runic, it will only replace all multi-letter combinations with their corrosponding rune(s).
-
-#### Arguments
-* **str** (String) - the string to replace letter combinations into
-
-#### Examples
-``` javascript 
-transcribeLetterCombinations('Chris Chan') // ᚺᚱis ᚷan
-``` 

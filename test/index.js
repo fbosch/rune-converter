@@ -1,15 +1,15 @@
 import assert from 'assert'
 import _ from 'lodash'
-import {transcribeSingleLetter, transcribeLetterCombinations, transcribe } from '../lib'
+import {transcribeLetter, transcribeLetterCombinations, transcribe } from '../lib'
 
 
 describe('rune-converter', function () {
   it('should return the correct rune corrosponding to the given letter or combination of letters', () => {
-    assert(transcribeSingleLetter('a') === 'ᚨ', 'returns corrosponding rune if it exists')
-    assert(transcribeSingleLetter(1) === '', 'returns empty string if the input is a number')
-    assert(transcribeSingleLetter('+') === '+', 'returns empty string if there\'s no corrosponding rune to the given letter')
-    assert(transcribeSingleLetter('eau') === 'ᛟ', 'is able to convert multiple letters to a single rune')
-    assert(transcribeSingleLetter('x') === 'ᚲᛋ', 'is able to convert single letter to multiple runes')
+    assert(transcribeLetter('a') === 'ᚨ', 'returns corrosponding rune if it exists')
+    assert(transcribeLetter(1) === '', 'returns empty string if the input is a number')
+    assert(transcribeLetter('+') === '+', 'returns empty string if there\'s no corrosponding rune to the given letter')
+    assert(transcribeLetter('eau') === 'ᛟ', 'is able to convert multiple letters to a single rune')
+    assert(transcribeLetter('x') === 'ᚲᛋ', 'is able to convert single letter to multiple runes')
   })
 
   it('should convert letter combinations into the proper rune(s)', () => {
