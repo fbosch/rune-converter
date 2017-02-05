@@ -27,7 +27,8 @@
     "mythology",
     "inscription",
     "language",
-    "utf8"
+    "utf8",
+    "archeology"
   ],
   "devDependencies": {
     "babel-cli": "^6.18.0",
