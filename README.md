@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/fBosch/rune-converter.svg?branch=master)](https://travis-ci.org/fBosch/rune-converter)
 # rune-converter
 
 a small node package for converting text to the runic alphabet
