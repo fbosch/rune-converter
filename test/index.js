@@ -1,6 +1,6 @@
 import assert from 'assert'
-import _ from 'lodash'
-import {transcribeLetter, transcribeLetterCombinations, transcribe } from '../lib'
+import { transcribeLetter, transcribeLetterCombinations, transcribe } from '../lib'
+import { PUNCTUATION, SPACING } from '../lib/enums'
 
 
 describe('rune-converter', function () {
@@ -13,24 +13,24 @@ describe('rune-converter', function () {
   })
 
   it('should convert letter combinations into the proper rune(s)', () => {
-    let longestFirstTestString = 'chris chan',
-        longestFirstTestStringReplaced = 'ᚺᚱis ᚷan'
+    const longestFirstTestString = 'chris chan'
+    const longestFirstTestStringReplaced = 'ᚺᚱis ᚷan'
     assert(transcribeLetterCombinations(longestFirstTestString) === longestFirstTestStringReplaced, 'should longest letter combinations first')
   })
 
   it('should convert a string of text to futhark', () => {
-    let testString = 'Lorem ipsum dolor sit amet.',
-      defaultResultString = 'ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛭',
-      singlePunctuationResultString = 'ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛫',
-      normalSpacingResultString = 'ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭'
+    const testString = 'Lorem ipsum dolor sit amet.'
+    const defaultResultString = 'ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛭'
+    const singlePunctuationResultString = 'ᛚᛟᚱᛖᛗ᛬ᛁᛈᛋᚢᛗ᛬ᛞᛟᛚᛟᚱ᛬ᛋᛁᛏ᛬ᚨᛗᛖᛏ᛫'
+    const normalSpacingResultString = 'ᛚᛟᚱᛖᛗ ᛁᛈᛋᚢᛗ ᛞᛟᛚᛟᚱ ᛋᛁᛏ ᚨᛗᛖᛏ᛭'
 
     assert(transcribe(testString) === defaultResultString, 'returns converted string')
 
     assert(transcribe(testString,
-      { punctuation: 'single' }) === singlePunctuationResultString, 'punctuation is changable')
+      { punctuation: PUNCTUATION.SINGLE }) === singlePunctuationResultString, 'punctuation is changable')
 
     assert(transcribe(testString,
-      { spacing: 'normal' }) === normalSpacingResultString, 'spacing can be set to normal')
+      { spacing: SPACING.NORMAL }) === normalSpacingResultString, 'spacing can be set to normal')
 
     assert(transcribe(testString,
       { punctuation: 'invalid', spacing: 'invalid' } === defaultResultString), 'should return string with default settings if invalid options have been passed')

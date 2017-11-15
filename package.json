@@ -1,13 +1,8 @@
 {
   "name": "rune-converter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "convert text written in the latin alphabet to runes in elder futhark (UTF8)",
-  "homepage": "",
-  "author": {
-    "name": "Frederik Bosch",
-    "email": "frede.bosch@gmail.com",
-    "url": "https://github.com/fbosch"
-  },
+  "author": "Frederik Bosch <frede.bosch@gmail.com> (https://github.com/fbosch)",
   "files": [
     "dist"
   ],
@@ -49,8 +44,7 @@
     "gulp-mocha": "^2.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
-    "isparta": "^3.0.3",
-    "lodash": "^4.17.4"
+    "isparta": "^3.0.3"
   },
   "eslintConfig": {
     "ecmaVersion": 6,
@@ -70,17 +64,6 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "Apache-2.0",
-  "dependencies": {
-    "lodash.assign": "^4.2.0",
-    "lodash.clone": "^4.5.0",
-    "lodash.has": "^4.5.2",
-    "lodash.isnan": "^3.0.2",
-    "lodash.isnil": "^4.0.0",
-    "lodash.isstring": "^4.0.1",
-    "lodash.keys": "^4.2.0",
-    "lodash.replace": "^4.1.4",
-    "lodash.tolower": "^4.1.2",
-    "lodash.tonumber": "^4.0.3"
-  }
+  "license": "MIT",
+  "dependencies": {}
 }
